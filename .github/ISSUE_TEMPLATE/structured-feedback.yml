@@ -1,0 +1,83 @@
+name: Structured Feedback
+description: Submit detailed, structured feedback for the SDLC platform (ACE-198)
+title: "[Feedback] "
+labels: ["customer-feedback"]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - bug
+        - feature
+        - improvement
+        - question
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - low
+        - medium
+        - high
+        - critical
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is the overall context?
+    validations:
+      required: true
+  - type: textarea
+    id: request
+    attributes:
+      label: Request
+      description: What specifically are you asking for?
+    validations:
+      required: true
+  - type: textarea
+    id: what-works
+    attributes:
+      label: What Works
+      description: Current working baseline — what functions correctly today
+    validations:
+      required: false
+  - type: textarea
+    id: what-expected
+    attributes:
+      label: What I Expected
+      description: Desired behavior or outcome
+    validations:
+      required: false
+  - type: textarea
+    id: what-known
+    attributes:
+      label: What I Know
+      description: Relevant confirmed facts
+    validations:
+      required: false
+  - type: textarea
+    id: what-unknown
+    attributes:
+      label: What I Do NOT Know
+      description: Unknowns that need investigation
+    validations:
+      required: false
+  - type: input
+    id: submitted-by
+    attributes:
+      label: Submitted By
+      description: Your name or agent identity
+    validations:
+      required: false
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Which part of the platform this originated from
+    validations:
+      required: false
